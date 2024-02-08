@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon taskly" type="imagex/png" href="./src/img/logo.png">
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/css/style-login.css">
+</head>
+
+<body>
+    <div class="bk-login">
+        <h2 id="msg"></h2>
+        <div class="modal-login">
+            <div id="voltar">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                </svg>
+            </div>
+            <div class="modal-img">
+                <img src="./src/img/imglogin.png" alt="">
+            </div>
+            <div class="modal-form">
+                <h1>Bem-vindo(a)</h1>
+                <p>Entre na sua conta</p>
+
+                <form id="formLogin">
+                    <input type="email" name="txtEmail" id="txtEmail" placeholder="E-mail">
+                    <input type="password" name="txtSenha" id="txtSenha" placeholder="Senha">
+                    <button class="btn" type="submit" id="btnLogin">Entrar</button>
+                    <p>Não tem uma conta? <a href="./cadastro.html">Cadastre-se</a></p>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="src/js/func_login.js"></script>
+
+</html>

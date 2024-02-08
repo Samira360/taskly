@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon taskly" type="imagex/png" href="./src/img/logo.png">
+    <title>Taskly - Tela inicial</title>
+    <link rel="stylesheet" type="text/css" href="./src/css/style-principal.css">
+</head>
+
+<body>
+    <h2 id="msgAviso"></h2>
+
+    <header>
+        <div class="container header">
+            <div class="header-logo">
+                <img src="./src/img/logo.png" alt=""> <!--- ./index.html -->
+            </div>
+
+            <div class="header-profile">
+                <div class="table_center">
+                    <div class="drop-down">
+                        <div id="dropDown" class="drop-down__button">
+                            <div class="profile">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                                </svg>
+                                
+                            </div>
+                            <p id="nomeUser">Nome</p>
+                        </div>
+
+                        <div class="drop-down__menu-box">
+                            <ul class="drop-down__menu">
+                                <li data-name="profile" class="drop-down__item" id="link-profile">Seu perfil</li>
+                                <li data-name="dashboard" class="drop-down__item" id="btnSair">Sair</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+                
+            </div>
+
+
+        </div>
+    </header>
+
+
+    <div class="body-main">
+
+        <aside class="sidebar open">
+            <div class="collections-title">
+                <h1>Coleções</h1>
+            </div>
+
+            <div class="collections-itens" id="coll-itens">
+
+                <!-- ------ coleções -->
+
+            </div>
+
+            <div class="collections-add">
+                <p>Adicionar coleção</p>
+                <div id="btnModalColl">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-plus" viewBox="0 0 16 16">
+                        <path
+                            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                    </svg>
+                </div>
+            </div>
+
+
+        </aside>
+
+
+        <main class="main">
+            <div class="coll-icon" id="toggleBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                </svg>
+            </div>
+
+
+            <div class="main-content">
+
+                <!-- tarefas -->
+
+
+                <div class="main-tasks">
+                    <div class="coll-infos">
+
+
+                        <div class="coll-title">
+                            <h1 id="nomeColecao">Titulo</h1>
+                            <div class="table_center">
+                                <div class="drop-down-alter">
+                                    <div id="dropDownAlter" class="drop-down-alter__button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                            <path
+                                                d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                                        </svg>
+                                    </div>
+
+                                    <div class="drop-down-alter__menu-box">
+                                        <ul class="drop-down-alter__menu">
+                                            <li data-name="profile" class="drop-down-alter__item" id="btnAlterColecao">
+                                                Editar</li>
+                                            <li data-name="dashboard" class="drop-down-alter__item"
+                                                id="btnApagaColecao">Apagar</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="new-tasks">
+                            <div id="btnModalTask">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-plus" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                </svg>
+                            </div>
+                            <p>Adicionar tarefa</p>
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="coll-tasks">
+                        <div class="coll-order">
+                            <h3>Tarefas - 0</h3> 
+                            
+                            <div class="order">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z"/>
+                                </svg>
+                                <div>
+                                    <h5>Ordernar - </h5>
+                                    <button id="btnOrdenaData" class="clicked">Data</button>
+                                    <button id="btnOrdenaPriori" >Prioridade</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- <h3>Tarefas - 0</h3> -->
+
+                        <div class="list-tasks">
+
+                            <!-- tasks -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="coll-tasks-concluidas">
+                        <h3>Tarefas completas - 0</h3>
+
+                        <div class="list-tasks">
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="msgIncialTarefa">
+                        <h1>Você não tem nenhuma Tarefa</h1>
+                    </div>
+
+                </div>
+
+                <!-- -------  -->
+                <h1 id="msgInicial">Você não tem nenhuma <strong style="color: rgb(141, 141, 141)">tarefa</strong> <br/>crie uma <strong style="color: rgb(141, 141, 141)">coleção</strong> para adicionar novas tarefas</h1>
+            </div>
+        </main>
+    </div>
+
+    <div class="shadow-modal-coll">
+        <div class="modal-collection-form">
+            <div class="close-modal-coll">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                    <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg>
+            </div>
+            <h1>Vamos criar uma <br />coleção de tarefas</h1>
+
+            <!-- form coleção -->
+            <form action="" id="formCol">
+                <input type="hidden" id="txtIdColl">
+                <input type="text" name="txtTitulo" id="txtTitulo" placeholder="Titulo">
+
+                <select name="txtCategoria" id="txtCategoria">
+                    <option style="color: #999999;" value="0" disabled selected>Tipo coleção</option>
+
+                </select>
+
+                <button class="btn" id="btnAddCol">Criar</button>
+            </form>
+            <!-- ------------------------------------- -->
+        </div>
+    </div>
+
+    <div class="shadow-modal-task">
+        <div class="modal-task-form">
+            <div class="close-modal-task">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                    <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg>
+            </div>
+            <h1>Crie sua nova tarefa</h1>
+
+            <!-- modal task -->
+            <form id="formTarefa">
+                <input type="hidden" id="txtTar">
+                <input type="hidden" id="txtColl">
+                <input type="text" name="txtTituloTar" id="txtTituloTar" placeholder="Titulo">
+                <div>
+                    <select name="txtPrioridade" id="txtPrioridade">
+                        <!-- <option style="color: #999999;" value="0" disabled selected>Grau de prioridade</option> -->
+                        <option value="3">Prioridade - Baixa</option>
+                        <option value="2">Prioridade - Média</option>
+                        <option value="1">Prioridade - Alta</option>
+                    </select>
+                    <input type="date" name="txtData" id="txtData" placeholder="Pra quando?">
+                </div>
+                <textarea name="txtDesc" id="txtDesc" row="200" placeholder="Descrição"></textarea>
+                <button class="btn" id="btnAddTarefa">Criar</button>
+            </form>
+
+            <!-- ----------- -->
+        </div>
+    </div>
+
+    <div class="shadow-modal-comfirm">
+        <div class="modal-confirm">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                <path
+                    d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+            </svg>
+            <h1>Tem certeza?</h1>
+            <p>Deseja realmente excluir essa coleção?</p>
+            <div>
+                <input type="hidden" id="txtQual">
+                <button class="btn no" id="btnCloseModalCofirm">Não</button>
+                <button class="btn" id="btnApagaObj">Sim, quero excluir</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container footer">
+            <div class="footer-logo">
+                <img src="./src/img/logo.png" alt="">
+            </div>
+            <div class="footer-sobre">
+                <h3>Sobre nós</h3>
+                <p>Ajudamos as pessoas a organizarem suas vidas através de um gerenciador de tarefas simples, prático e
+                    bonito.</p>
+            </div>
+            <div class="footer-contato">
+                <h3>Contato</h3>
+                <p>Dúvidas ou sugestões?</p>
+                <a href="#">contact@taskly.com</a>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- modelo colecao -->
+    <div class="collections-item" id="colecao-modelo" style="display: none;">
+
+        <div class="item-icon ">
+            <img src="" alt="">
+        </div>
+
+        <p>Faculdade</p>
+
+        <!-- <div class="item-infos">
+            <p>Faculdade</p>
+            
+            <div class="table_center">
+                <div class="drop-down-alter">
+                    <div id="dropDownAlter" class="drop-down-alter__button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                            <path
+                                d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                        </svg>
+                    </div>
+
+                    <div class="drop-down-alter__menu-box">
+                        <ul class="drop-down-alter__menu">
+                            <li data-name="profile" class="drop-down-alter__item" id="btnAlterColecao">
+                                Editar</li>
+                            <li data-name="dashboard" class="drop-down-alter__item"
+                                id="btnApagaColecao">Apagar</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+    <!-- ---------------------- -->
+
+
+    <!-- modelo task -->
+    <!-- <div class="task-body">
+        <div class="task-check">
+            <svg id="iconCheck" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                <path
+                    d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+            </svg>
+        </div>
+        <div class="task-infos">
+            <h3>Title task</h3>
+            <div class="date">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17">
+                    <path
+                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1H2zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V5z" />
+                </svg>
+                <p>Terça</p>
+            </div>
+        </div>
+
+        <div class="icons-alter">
+            <svg class="btnAlterTarefa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                <path
+                    d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
+            </svg>
+
+            <svg class="btnApagaTarefa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                <path
+                    d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
+            </svg>
+        </div>
+    </div> -->
+
+    <div class="task-body">
+
+        <div class="task-body-content">
+            <div class="task-check">
+                <svg id="iconCheck" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                    <path
+                        d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                </svg>
+            </div>
+            
+            <div class="task-infos">
+                <h3>Title task</h3>
+                <div class="task-infos-date">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17">
+                        <path
+                            d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1H2zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V5z" />
+                    </svg>
+                    <p>Terça</p>
+                </div>
+            </div>
+
+            <div class="icons-alter">
+                <svg class="btnAlterTarefa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                    <path
+                        d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
+                </svg>
+
+                <svg class="btnApagaTarefa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                    <path
+                        d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
+                </svg>
+            </div>
+
+            <div class="icon-expand">
+                <svg class="btnOpenDesc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                  </svg>
+
+            </div>
+        </div>
+        
+        
+        <div class="task-body-descricao">
+            <p>--</p>
+        </div>
+    </div>
+
+    <!-- ----------------------------- -->
+    <!-- check icon  -->
+
+
+
+</body>
+
+
+<script src="src/js/func_principal.js"></script>
+
+</html>

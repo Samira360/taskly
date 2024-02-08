@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon taskly" type="imagex/png" href="./src/img/logo.png">
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/css/style-perfil.css">
+</head>
+
+<body>
+    <main class="container">
+        <h2 id="msgAviso"></h2>
+
+        <div class="profile-area">
+
+            <div id="voltar">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                    </svg>
+            </div>
+
+            <div class="content">
+                <div class="profile-line"></div>
+
+                <div class="profile-content">
+
+                    <div class="content-icon">
+                        <div class="profile">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="content-infos">
+                        <div>
+                            <span>Coleções:</span>
+                            <p id="colecoes">0</p>
+                        </div>
+                        <div>
+                            <span>Tarefas:</span>
+                            <p id="tarefas">0</p>
+                        </div>
+                        <div>
+                            <span>Tarefas conluidas:</span>
+                            <p id="concluidas">0</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="profile-data">
+
+                    <div class="data-name">
+                        <h3>Nome:</h3>
+                        <div class="name-icon" id="divName">
+                            <p id="nomeUser">nome</p>
+                            <svg id="btnAlter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path
+                                    d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
+                            </svg>
+                        </div>
+                        <div class="alter-name" id="divAlter">
+                            <input type="text" id="txtName">
+                            <svg id="btnClose" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path
+                                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                            <svg id="btnSave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path
+                                    d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="data-email">
+                        <h3>E-mail:</h3>
+                        <p> nome@gmail.com</p>
+                    </div>
+
+                    <div class="data-form-pass">
+                        <h3>Trocar senha:</h3>
+                        <form id="formAlterPass">
+                            <!-- <input type="hidden" id="codUser"> -->
+                            <input type="password" id="txtSenhaAntiga" placeholder="Senha atual">
+                            <!-- <input type="password" id="txtSenhaNova" placeholder="Senha nova"> -->
+                            <label for="txtSenhaNova">
+                                <input type="password" name="txtSenhaNova" id="txtSenhaNova" placeholder="Senha nova">
+                                <input type="password" name="txtComfirm" id="txtComfirm" placeholder="Confirmar senha nova">
+                                <div class="validate">
+                                    <div class="pass-status">
+                                        <div class="pass-dica">
+
+                                            <div class="dica">
+                                                ?
+                                            </div>
+
+                                            <div class="msg-dica">
+                                                Uma senha forte deve conter, ao menos:
+                                                <ul>
+                                                    <li>
+                                                        <div id="eig">6 caracteres;</div>
+                                                    </li>
+                                                    <li>
+                                                        <div id="num">1 número;</div>
+                                                    </li>
+                                                    <li>
+                                                        <div id="min">1 letra minúscula;</div>
+                                                    </li>
+                                                    <li>
+                                                        <div id="mai">1 letra maiúscula;</div>
+                                                    </li>
+                                                    <li>
+                                                        <div id="esp">1 caracter especial.</div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+
+                                        <div>
+                                            <div id="fraca"></div>
+                                            <div id="media"></div>
+                                            <div id="forte"></div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <p id="aviso"></p>
+                                </div>
+                            </label>
+                            
+                        </form>
+                        <div class="form-btn">
+                            <button class="btn" id="btnAlterSenha">Alterar</button>
+                        </div>
+                    </div>
+
+                   
+
+                    <div class="data-logout">
+                        <button class="btn" id="btnSair">Sair</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="icon-correct">
+        <svg  xmlns="http://www.w3.org/2000/svg" class="bi bi-check" viewBox="0 0 16 16">
+                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+        </svg>
+
+    </div>
+</body>
+
+<script src="./src/js/func_perfil.js"></script>
+
+</html>

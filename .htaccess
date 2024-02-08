@@ -1,0 +1,5 @@
+#Bloquear o listar de arquivos dos diretorios
+Options -Indexes
+
+#Quando houver erro 403 redirecione o usuario
+ErrorDocument 403 http://localhost/telasihc/index.html
